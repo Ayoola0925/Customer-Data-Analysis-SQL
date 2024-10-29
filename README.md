@@ -9,13 +9,13 @@
 
 - [Customer Data Analysis](customer-data-analysis)
   
-   - Query 1: How many unique customers are in the dataset?
+   - Query 1: [How many unique customers are in the dataset?](how-many-unique-customers-are-in-the-dataset?)
     
-     SQL Query
+     [SQL Query](sql-query)
     
-     Explanation
+     [Explanation](explanation)
 
-     Insight
+     [Insight](insight)
 
   -  Query 2: What is the distribution of customers across different states?
 
