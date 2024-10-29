@@ -17,45 +17,45 @@
 
      [Insight](insight)
 
-  -  Query 2: What is the distribution of customers across different states?
+  -  Query 2: [What is the distribution of customers across different states?](what-is-the-distribution-of-customers-across-different-states)
 
-    SQL Query
+    [SQL Query](sql-query)
   
-    Explanation
+    [Explanation](explanation)
   
-    Insight
+    [Insight](insight)
 
--  Query 3: Which customers made the most orders?
+-  Query 3: [Which customers made the most orders?](which-customers-made-the-most-orders?)
 
-    SQL Query
+    [SQL Query](sql-query)
 
-    Explanation
+    [Explanation](explanation)
 
-    Insight
+    [Insight](insight)
 
--  Query 4: Identify the top 5 customers by revenue
+-  Query 4: [Identify the top 5 customers by revenue](identify-the-top-5-customers-by-revenue)
 
-     SQL Query
+     [SQL Query](sql-query)
 
-     Explanation
+     [Explanation](explanation)
 
-     Insight
+     [Insight](insight)
 
--  Query 5: What is the average number of orders per customer?
+-  Query 5: [What is the average number of orders per customer?](what-is-the-average-number-of-orders-per-customer?)
 
-    SQL Query
+    [SQL Query](sql-query)
 
-    Explanation
+    [Explanation](explanation)
 
-    Insight
+    [Insight](insight)
 
--  Query 6: How many new customers were acquired in the last 12 months?
+-  Query 6: [How many new customers were acquired in the last 12 months?](how-many-new-customers-were-acquired-in-the-last-12-months)
 
-    SQL Query
+    [SQL Query](sql-query)
 
-    Explanation
+    [Explanation](explanation)
 
-    Insight
+    [Insight](insight)
 
 
 
@@ -145,7 +145,7 @@ sql
 
 SELECT 
     c.CustomerID, 
-    CONCAT(c.FirstName) AS CustomerName, 
+    c.FirstName 
     COUNT(o.OrderID) AS total_orders
 FROM 
     customers c
@@ -179,7 +179,7 @@ sql
 
 SELECT 
     c.CustomerID, 
-    c.LastName AS CustomerName, 
+    c.LastName 
     SUM(o.Quantity * p.Total_price) AS total_revenue
 FROM 
     customers c
