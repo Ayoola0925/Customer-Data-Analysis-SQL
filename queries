@@ -1,0 +1,22 @@
+-- Query 1 for total revenue for Employees
+SELECT 
+    e.EmployeeID, 
+    e.First, 
+    e.Last, 
+    DATE_ADD('1970-01-01', INTERVAL e.HireDate DAY) AS HireDate_Converted,
+    DATEDIFF(CURDATE(), DATE_ADD('1970-01-01', INTERVAL e.HireDate DAY)) / 365 AS tenure_years, 
+    COUNT(o.OrderID) AS total_orders, 
+    SUM(o.Quantity * p.SuggestedRetail) AS total_revenue 
+FROM 
+    employees e 
+LEFT JOIN 
+    orders o ON e.EmployeeID = o.SalesPersonID 
+JOIN 
+    products p ON o.ProductID = p.ProductID 
+GROUP BY 
+    e.EmployeeID, e.First, e.Last, e.HireDate  -- Include all relevant columns here
+ORDER BY 
+    tenure_years DESC 
+LIMIT 0, 1000;
+
+
